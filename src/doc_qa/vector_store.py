@@ -40,7 +40,7 @@ class VectorStoreError(Exception):
 
 
 class ResumeVectorStore:
-    """Manages isolated ChromaDB vector collections for candidate resumes."""
+    """Manages isolated ChromaDB vector collections for PDF documents."""
 
     def __init__(
         self,
@@ -177,3 +177,7 @@ class ResumeVectorStore:
             finally:
                 self._vector_db = None
                 self._doc_count = 0
+
+
+# General document alias
+DocVectorStore = ResumeVectorStore

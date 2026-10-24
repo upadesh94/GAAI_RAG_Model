@@ -117,27 +117,31 @@ The **AI Resume Question Answering System** applies Retrieval-Augmented Generati
 ## 5. Repository Structure
 
 ```text
-ai-resume-qa/
+GAAI_RAG_Model/
 ├── .env.example              # Template for environment variables
 ├── .gitignore                # Git exclusions (API keys, caches, ChromaDB, PDFs)
 ├── README.md                 # Complete system documentation
 ├── requirements.txt          # Python dependencies
-├── app.py                    # Streamlit web application
-├── resume_qa/                # Modular Python package
-│   ├── __init__.py           # Package exports
-│   ├── config.py             # Config & settings with validation and masking
-│   ├── pdf_processing.py     # PDF validation, extraction, and chunking
-│   ├── embeddings.py         # GeminiEmbeddings adapter with caching
-│   ├── vector_store.py       # Isolated ChromaDB vector store
-│   └── answering.py          # Grounded QA service with citations & fallback
-├── tests/                    # Automated pytest suite
+├── pytest.ini                # Pytest configuration
+├── app.py                    # Root entrypoint for Streamlit UI
+├── cli.py                    # Root entrypoint for Terminal CLI
+├── src/                      # Source code
+│   ├── app.py                # Streamlit web application
+│   ├── cli.py                # Terminal interactive chatbot
+│   └── doc_qa/               # Modular document QA package
+│       ├── __init__.py       # Package exports & aliases
+│       ├── config.py         # Config & settings with validation and masking
+│       ├── pdf_processing.py # PDF validation, extraction, and chunking
+│       ├── embeddings.py     # GeminiEmbeddings adapter with batching
+│       ├── vector_store.py   # Isolated ChromaDB vector store
+│       └── answering.py      # Grounded QA service with citations & fallback
+├── tests/                    # Automated pytest suite (20 tests)
 │   ├── test_pdf_processing.py# PDF extraction, corruption, & chunking tests
 │   ├── test_retrieval.py     # Vector retrieval & session isolation tests
 │   └── test_answering.py     # Grounded QA, fallback, & API error tests
-├── notebooks/                # Functional reference notebook
+├── notebooks/                # Jupyter notebook reference
 │   └── GAAI_PR_10_Resume.ipynb
 └── data/                     # Local test datasets (ignored by git)
-    └── sample_resume.pdf     # Synthetic 2-page test resume
 ```
 
 ---

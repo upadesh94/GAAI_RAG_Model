@@ -4,8 +4,8 @@ import hashlib
 import pytest
 from langchain_core.documents import Document
 
-from resume_qa.embeddings import GeminiEmbeddings
-from resume_qa.vector_store import ResumeVectorStore, VectorStoreError
+from doc_qa.embeddings import GeminiEmbeddings
+from doc_qa.vector_store import ResumeVectorStore, VectorStoreError
 
 
 class DeterministicMockEmbeddings:

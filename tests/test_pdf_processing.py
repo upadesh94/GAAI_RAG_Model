@@ -5,7 +5,7 @@ import pytest
 import pypdf
 from pypdf.generic import DecodedStreamObject, DictionaryObject, NameObject
 
-from resume_qa.pdf_processing import (
+from doc_qa.pdf_processing import (
     EmptyPDFError,
     EncryptedPDFError,
     PDFValidationError,

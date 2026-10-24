@@ -231,3 +231,7 @@ Answer:"""
             model_used=model_used,
             is_available=is_available,
         )
+
+
+# General document alias
+DocQAService = ResumeQAService

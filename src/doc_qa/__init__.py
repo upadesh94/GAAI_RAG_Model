@@ -1,7 +1,8 @@
-"""AI Resume Question Answering System (RAG).
+"""DocChat AI — Modular Document Question Answering Package (RAG).
 
 A modular Python package providing PDF text extraction, Gemini embeddings adapter,
-ChromaDB vector store isolation, and context-grounded question answering.
+ChromaDB vector store isolation, and context-grounded question answering for any
+PDF document.
 """
 
 from .config import (
@@ -26,10 +27,11 @@ from .pdf_processing import (
     validate_pdf_bytes,
 )
 from .embeddings import GeminiEmbeddings, GeminiEmbeddingsError
-from .vector_store import ResumeVectorStore, VectorStoreError
+from .vector_store import DocVectorStore, ResumeVectorStore, VectorStoreError
 from .answering import (
     FALLBACK_NOT_AVAILABLE,
     SYSTEM_INSTRUCTION,
+    DocQAService,
     EvidenceItem,
     QAResponse,
     ResumeQAService,
@@ -55,8 +57,10 @@ __all__ = [
     "EmptyPDFError",
     "GeminiEmbeddings",
     "GeminiEmbeddingsError",
+    "DocVectorStore",
     "ResumeVectorStore",
     "VectorStoreError",
+    "DocQAService",
     "ResumeQAService",
     "QAResponse",
     "EvidenceItem",

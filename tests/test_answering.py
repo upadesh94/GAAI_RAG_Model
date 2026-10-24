@@ -4,14 +4,14 @@ from unittest.mock import MagicMock, patch
 import pytest
 from langchain_core.documents import Document
 
-from resume_qa.answering import (
+from doc_qa.answering import (
     FALLBACK_NOT_AVAILABLE,
     SYSTEM_INSTRUCTION,
     QAResponse,
     ResumeQAService,
 )
-from resume_qa.config import AppConfig
-from resume_qa.vector_store import ResumeVectorStore
+from doc_qa.config import AppConfig
+from doc_qa.vector_store import ResumeVectorStore
 
 
 class MockVectorStore:
