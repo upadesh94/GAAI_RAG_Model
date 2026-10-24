@@ -1,0 +1,19 @@
+# Core Google GenAI SDK
+google-genai>=1.49.0
+
+# Document Processing & Chunking
+pypdf>=5.0.0
+langchain-text-splitters>=0.3.0
+langchain-community>=0.3.0
+
+# Vector Database
+chromadb>=0.5.0
+
+# Web Interface
+streamlit>=1.35.0
+
+# Configuration & Utilities
+python-dotenv>=1.0.0
+
+# Testing
+pytest>=8.0.0
